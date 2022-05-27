@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiLanguageApp.ChangeLanguagePage" xmlns:translator="clr-namespace:MultiLanguageApp.Helpers">
+    <ContentPage.Content>
+        <StackLayout Padding="20" VerticalOptions="CenterAndExpand">
+            <Label Text="{translator:Translate SelectLanguage}"/>
+            <Picker x:Name="picker">
+                <Picker.Items>
+                    <x:String>English</x:String>
+                    <x:String>Spanish</x:String>
+                    <x:String>French</x:String>
+                    <x:String>Arabic</x:String>
+                </Picker.Items>
+            </Picker>
+
+            <Button Text="{translator:Translate Save}"
+                       Clicked="Button_Clicked"
+                       BackgroundColor="Black"
+                       TextColor="White"/>
+            <Button Text="{translator:Translate Back}" Clicked="Button_Clicked_1" BackgroundColor="Red" TextColor="White"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

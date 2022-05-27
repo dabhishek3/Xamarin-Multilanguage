@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MultiLanguageApp.AboutPage" xmlns:translator="clr-namespace:MultiLanguageApp.Helpers">
+    <ContentPage.Content>
+        
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+                <Label FontSize="16" Padding="30,24,30,0" Text="{translator:Translate WelcomeMessage}"></Label>
+                <Label FontSize="16" Padding="30,24,30,0" Text="{translator:Translate HelloMessage}">
+
+
+                </Label>
+                <Label FontSize="16" Padding="30,24,30,0" Text="{translator:Translate Name}"></Label>
+                <Label FontSize="16" Padding="30,24,30,0" Text="{translator:Translate WorkDetail}"></Label>
+                <Label FontSize="16" Padding="30,24,30,0" Text="{translator:Translate Address}"></Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Text="{translator:Translate Back}" BackgroundColor="Red" TextColor="White" Clicked="Button_Clicked"/>
+                    
+                </Grid>
+
+
+
+
+            </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
